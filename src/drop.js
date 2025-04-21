@@ -5,14 +5,17 @@ export class DropDown {
         this.visible = visible;
     }
 
-    addShowList(){
+    addFunctionality(){
         this.button.addEventListener('click', ()=>{
-            this.elements.style.display = "block";
+            if(!this.visible){
+                this.elements.style.display = "block";
+                this.visible = true;
+            }
+            else if(this.visible){
+                this.elements.style.display = "none";
+                this.visible = false;
+            }
+            
         })
     }
-
-    hideList(){
-        this.elements.style.display = "none";
-    }
-
 }
