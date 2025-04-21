@@ -1,21 +1,11 @@
+import {DropDown} from "./drop.js";
 
-export class DropDown {
-    constructor(elements){
-        this.elements = elements;
-    }
-
-    showList(){
-        this.elements.style.display = "block";
-    }
-
-    hideList(){
-        this.elements.style.display = "none";
-    }
-}
+const dropButton = document.querySelector('#drop');
+const list = document.querySelector('li');
+const dropObject = new DropDown(dropButton, list);
+dropObject.addShowList();
 
 
-const list = document.querySelector("li")
-const drop = new DropDown(list)
 
-drop.showList()
-drop.hideList()
+
+

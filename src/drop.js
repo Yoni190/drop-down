@@ -1,6 +1,18 @@
-import {greeting} from "./greeting.js";
+export class DropDown {
+    constructor(button, elements, visible = false){
+        this.button = button;
+        this.elements = elements;
+        this.visible = visible;
+    }
 
-console.log(greeting);
+    addShowList(){
+        this.button.addEventListener('click', ()=>{
+            this.elements.style.display = "block";
+        })
+    }
 
+    hideList(){
+        this.elements.style.display = "none";
+    }
 
-
+}
